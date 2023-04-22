@@ -1,6 +1,7 @@
-import logo from './logo.svg';
-import './App.css';
-import Image from './Image';
+import logo from "./logo.svg";
+import "./App.css";
+import Image from "./Image";
+import Beauty from "./beauty";
 
 function App() {
   return (
@@ -20,7 +21,8 @@ function App() {
         </a>
       </header>
       <Image></Image>
-      
+      <Beauty tn={4}></Beauty>
+      <Beauty tn={3}></Beauty>
     </div>
   );
 }
