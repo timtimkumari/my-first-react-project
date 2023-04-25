@@ -2,6 +2,7 @@ import logo from "./logo.svg";
 import "./App.css";
 import Image from "./Image";
 import Beauty from "./beauty";
+import Instagram from "./Instagram";
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
       <Image></Image>
       <Beauty tn={4}></Beauty>
       <Beauty tn={3}></Beauty>
+      <Instagram></Instagram>
     </div>
   );
 }

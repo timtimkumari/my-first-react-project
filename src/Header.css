@@ -1,0 +1,20 @@
+.title {
+  position: absolute;
+  justify-content: center;
+  display: flex;
+  width: 100%;
+  top: 6px;
+  font-size: 54px;
+}
+.top {
+  width: 20px;
+  border-top: 2px solid gray;
+  margin-top: 35px;
+}
+.bgtitle {
+  font-size: 34px;
+  color: darkgray;
+}
+.pot {
+  position: relative;
+}
