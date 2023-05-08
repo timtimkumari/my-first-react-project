@@ -1,0 +1,48 @@
+.star li {
+  list-style: none;
+  gap: 7px;
+}
+li {
+  display: flex;
+  align-items: center;
+}
+.star {
+  border-right: 1px solid rgb(237, 229, 229);
+  width: 300px;
+  padding-left: 30px;
+}
+.moon {
+  border-top: 1px solid rgb(237, 229, 229);
+}
+.titel {
+  border-top: 1px solid rgb(237, 229, 229);
+}
+.timtim {
+  border-top: 1px solid rgb(237, 229, 229);
+}
+.ayush {
+  border-top: 1px solid rgb(237, 229, 229);
+}
+.timtim h4 {
+  color: red;
+}
+.moon h4 {
+  color: red;
+}
+.room {
+  display: flex;
+  justify-content: space-between;
+  width: 275px;
+}
+.jon {
+  display: flex;
+  justify-content: space-between;
+  width: 275px;
+}
+.himanshu {
+  font-size: 10px;
+  color: gray;
+}
+.star h3 {
+  margin-left: 0px;
+}

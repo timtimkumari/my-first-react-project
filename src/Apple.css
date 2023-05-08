@@ -1,0 +1,21 @@
+.nutan {
+  width: 175px;
+  background-image: url(https://cdn2.vectorstock.com/i/1000x1000/12/46/abstract-blossom-floral-greeting-card-background-vector-12761246.jpg);
+  background-size: cover;
+  border: solid gray 2px;
+  padding: 5px;
+}
+.nutan img {
+  width: 100%;
+  height: 150px;
+}
+.nutan p {
+  margin-top: -25px;
+  font-size: 20px;
+  color: white;
+  margin-bottom: 5px;
+}
+.nutan h4 {
+  margin-top: 5px;
+  color: white;
+}

@@ -1,0 +1,7 @@
+.footer_container {
+  text-align: left;
+  margin: 30px;
+}
+.footer_content {
+  display: flex;
+}
