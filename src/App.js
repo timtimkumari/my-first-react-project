@@ -1,16 +1,6 @@
 import logo from "./logo.svg";
 import "./App.css";
-import Image from "./Image";
-import Beauty from "./beauty";
-import Instagram from "./Instagram";
-import Card from "./Card";
-import Apple from "./Apple";
-import Card2 from "./Card2";
-import Star from "./Star";
-import List from "./List";
-import Router from "./Router";
 import List2 from "./List2";
-import Counter from "./Counter";
 
 function App() {
   return (
@@ -29,7 +19,7 @@ function App() {
           Learn React
         </a>
       </header>
-      <Counter></Counter>
+      <List2></List2>
     </div>
   );
 }
