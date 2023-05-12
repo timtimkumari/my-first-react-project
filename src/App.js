@@ -1,6 +1,7 @@
 import logo from "./logo.svg";
 import "./App.css";
-import List2 from "./List2";
+import List2 from "./product-filter/List2";
+import ProductFiltetDetail from "./product-filter/product-filter-detail";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
         </a>
       </header>
       <List2></List2>
+      <ProductFiltetDetail />
     </div>
   );
 }

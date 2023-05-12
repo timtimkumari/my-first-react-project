@@ -5,6 +5,11 @@
   margin-left: 10px;
   border-top: 30px;
 }
+.hello li {
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
 .hello p {
   margin: 6px;
 }

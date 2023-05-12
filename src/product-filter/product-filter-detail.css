@@ -1,0 +1,32 @@
+.bat {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid rgb(237, 229, 229);
+  height: 58px;
+  padding: 0 20px;
+}
+.bat ul {
+  display: flex;
+  color: rgb(172, 168, 168);
+}
+.bat ul li {
+  margin-left: 10px;
+  font-size: 14px;
+  cursor: pointer;
+}
+.boll {
+  border: 1px solid rgb(237, 229, 229);
+  height: 550px;
+  width: 1000px;
+}
+.music {
+  color: rgb(156, 153, 153);
+  cursor: pointer;
+}
+.content {
+  padding: 6px;
+}
+.container {
+  margin-right: 231px;
+}
