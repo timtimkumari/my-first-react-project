@@ -17,8 +17,8 @@
 }
 .boll {
   border: 1px solid rgb(237, 229, 229);
-  height: 550px;
   width: 1000px;
+  height: 600px;
 }
 .music {
   color: rgb(156, 153, 153);
@@ -29,4 +29,18 @@
 }
 .container {
   margin-right: 231px;
+}
+.hello ul {
+  padding: 13px;
+  font-size: 13px;
+  margin-top: -18px;
+  margin-left: -13px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  height: 500px;
+  overflow: auto;
+}
+.hello {
+  padding: 15px;
 }

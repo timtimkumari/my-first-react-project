@@ -1,3 +1,4 @@
+import ProductFilterItem from "./product-filter-item";
 import styles from "./product-filter.module.css";
 function ProductFiltet({ heading, data, inputType }) {
   return (
@@ -5,13 +6,11 @@ function ProductFiltet({ heading, data, inputType }) {
       <h3>{heading}</h3>
       <ul>
         {data.map((d) => (
-          <li>
-            <input type={inputType}></input>
-            <p>{d.title}</p>
-            {d.quantity && (
-              <span className={styles.himanshu}>({d.quantity})</span>
-            )}
-          </li>
+          <ProductFilterItem
+            inputType={inputType}
+            title={d.title}
+            quantity={d.quantity}
+          />
         ))}
       </ul>
     </div>

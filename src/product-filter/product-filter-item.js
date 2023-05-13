@@ -1,9 +1,10 @@
-function ProductFilterItem() {
+import styles from "./product-filter-item.module.css";
+function ProductFilterItem({ inputType, title, quantity }) {
   return (
-    <li>
+    <li className={styles.hello}>
       <input type={inputType}></input>
-      <p>{d.title}</p>
-      {d.quantity && <span className={styles.himanshu}>({d.quantity})</span>}
+      <p>{title}</p>
+      {quantity && <span className={styles.himanshu}>({quantity})</span>}
     </li>
   );
 }
