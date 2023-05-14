@@ -1,6 +1,9 @@
+import { useState } from "react";
 import "./product-filter-detail.css";
 import ProductFilterItem from "./product-filter-item";
-function ProductFiltetDetail() {
+function ProductFiltetDetail({ data }) {
+  const [query, setQuery] = useState("");
+
   const brandData = [
     { title: "Roadster", quantity: "3828" },
     { title: "Friskers", quantity: "1234" },
@@ -624,9 +627,11 @@ function ProductFiltetDetail() {
             type="text"
             placeholder="Search Brand"
             name="search"
+            value={query}
+            onChange={(e) => setQuery(e.target.value)}
           ></input>
         </div>
-        <div className="container">
+        {/* <div className="container">
           <ul>
             <li>#</li>
             <li>A</li>
@@ -656,18 +661,20 @@ function ProductFiltetDetail() {
             <li>Y</li>
             <li>Z</li>
           </ul>
-        </div>
+        </div> */}
         <div className="music">X</div>
       </div>
       <div className="hello">
         <ul>
-          {brandData.map((d) => (
-            <ProductFilterItem
-              inputType={"checkbox"}
-              title={d.title}
-              quantity={d.quantity}
-            />
-          ))}
+          {data
+            .filter((d) => d.title.toLowerCase().includes(query.toLowerCase()))
+            .map((d) => (
+              <ProductFilterItem
+                inputType={"checkbox"}
+                title={d.title}
+                quantity={d.quantity}
+              />
+            ))}
         </ul>
       </div>
     </div>

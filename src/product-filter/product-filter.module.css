@@ -2,28 +2,21 @@
   padding: 13px;
   font-size: 13px;
   margin-top: -18px;
-  margin-left: 10px;
   border-top: 30px;
-}
-.hello li {
-  list-style: none;
-  display: flex;
-  align-items: center;
-}
-.hello p {
-  margin: 6px;
 }
 
 .hello h3 {
-  margin: 11px;
   font-size: 15px;
   padding: 14px;
   margin-left: 9px;
 }
-.himanshu {
-  font-size: 10px;
-  color: gray;
-}
 .hello {
   border-top: 1px solid rgb(237, 229, 229);
+}
+.root {
+  color: red;
+  margin-left: 40px;
+  cursor: pointer;
+  padding: 12px;
+  margin-top: -19px;
 }

@@ -22,7 +22,6 @@ function App() {
         </a>
       </header>
       <List2></List2>
-      <ProductFiltetDetail />
     </div>
   );
 }
