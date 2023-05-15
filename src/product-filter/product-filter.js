@@ -1,6 +1,9 @@
+import { useState } from "react";
+import ProductFiltetDetail from "./product-filter-detail";
 import ProductFilterItem from "./product-filter-item";
 import styles from "./product-filter.module.css";
 function ProductFiltet({ heading, data, inputType }) {
+  const [detailsVisible, setDetailsVisble] = useState(false);
   let list = [],
     extra = 0;
   if (data.length > 8) {
@@ -22,7 +25,18 @@ function ProductFiltet({ heading, data, inputType }) {
           />
         ))}
       </ul>
-      {extra > 0 && <p className={styles.root}>+{extra} more </p>}
+      {extra > 0 && (
+        <div className={styles.mind}>
+          <p className={styles.root} onClick={() => setDetailsVisble(true)}>
+            +{extra} more{" "}
+          </p>
+          {detailsVisible && (
+            <div className={styles.mood}>
+              <ProductFiltetDetail data={data}></ProductFiltetDetail>
+            </div>
+          )}
+        </div>
+      )}
     </div>
   );
 }

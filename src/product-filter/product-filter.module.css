@@ -1,14 +1,12 @@
 .hello ul {
-  padding: 13px;
   font-size: 13px;
-  margin-top: -18px;
   border-top: 30px;
 }
 
 .hello h3 {
   font-size: 15px;
   padding: 14px;
-  margin-left: 9px;
+  margin-left: 15px;
 }
 .hello {
   border-top: 1px solid rgb(237, 229, 229);
@@ -19,4 +17,13 @@
   cursor: pointer;
   padding: 12px;
   margin-top: -19px;
+}
+.mood {
+  position: absolute;
+  z-index: 1;
+  top: -40px;
+  left: 60px;
+}
+.mind {
+  position: relative;
 }
