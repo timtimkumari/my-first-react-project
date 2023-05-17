@@ -32,7 +32,10 @@ function ProductFiltet({ heading, data, inputType }) {
           </p>
           {detailsVisible && (
             <div className={styles.mood}>
-              <ProductFiltetDetail data={data}></ProductFiltetDetail>
+              <ProductFiltetDetail
+                data={data}
+                close={() => setDetailsVisble(false)}
+              ></ProductFiltetDetail>
             </div>
           )}
         </div>

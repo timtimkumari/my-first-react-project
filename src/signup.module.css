@@ -1,0 +1,38 @@
+.container {
+  max-width: 700px;
+  margin: 0 auto;
+  height: 700px;
+  background-color: pink;
+  display: flex;
+}
+.content b {
+  margin-left: 25px;
+}
+.content {
+  width: 100%;
+  padding: 20px;
+  background-color: white;
+  margin: 10px;
+  margin-left: 12px;
+}
+.fackbook {
+  margin-left: 25px;
+}
+.fackbook p {
+  color: gainsboro;
+  margin-left: 1px;
+  margin-top: 25px;
+  font-size: 13px;
+}
+.h5 {
+  font-size: 10px;
+}
+.timtim {
+  width: 480px;
+  margin: 10px;
+  height: 62px;
+}
+.nutan {
+  margin-left: 10px;
+  margin: 15px;
+}

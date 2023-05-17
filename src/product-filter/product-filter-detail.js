@@ -1,14 +1,14 @@
 import { useState } from "react";
-import "./product-filter-detail.css";
+import styles from "./product-filter-detail.module.css";
 import ProductFilterItem from "./product-filter-item";
-function ProductFiltetDetail({ data }) {
+function ProductFiltetDetail({ data, close }) {
   const [query, setQuery] = useState("");
   return (
-    <div className="boll">
-      <div className="bat">
+    <div className={styles.boll}>
+      <div className={styles.bat}>
         <div>
           <input
-            className="content"
+            className={styles.content}
             type="text"
             placeholder="Search Brand"
             name="search"
@@ -46,10 +46,12 @@ function ProductFiltetDetail({ data }) {
             <li>Y</li>
             <li>Z</li>
           </ul>
-        </div> */}
-        <div className="music">X</div>
+  </div> */}
+        <div className={styles.music} onClick={close}>
+          X
+        </div>
       </div>
-      <div className="hello">
+      <div className={styles.hello}>
         <ul>
           {data
             .filter((d) => d.title.toLowerCase().includes(query.toLowerCase()))
