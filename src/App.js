@@ -4,6 +4,7 @@ import List2 from "./product-filter/List2";
 import ProductFiltetDetail from "./product-filter/product-filter-detail";
 import Hook from "./hook";
 import Signup from "./signup";
+import AccountSetting from "./Account-setting";
 
 function App() {
   return (
@@ -23,7 +24,8 @@ function App() {
         </a>
       </header>
 
-      <Signup></Signup>
+      {/* <Signup></Signup> */}
+      <AccountSetting></AccountSetting>
     </div>
   );
 }

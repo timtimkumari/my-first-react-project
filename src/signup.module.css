@@ -1,12 +1,13 @@
 .container {
-  max-width: 700px;
+  max-width: 625px;
   margin: 0 auto;
-  height: 700px;
+  height: 715px;
   background-color: pink;
   display: flex;
 }
 .content b {
   margin-left: 25px;
+  font-size: 26px;
 }
 .content {
   width: 100%;
@@ -28,11 +29,70 @@
   font-size: 10px;
 }
 .timtim {
-  width: 480px;
-  margin: 10px;
-  height: 62px;
+  padding: 5px 10px;
+  font-size: 15px;
 }
 .nutan {
-  margin-left: 10px;
   margin: 15px;
+}
+.ayush {
+  display: flex;
+  margin-left: 14px;
+  margin-top: -13px;
+}
+.ayush p {
+  background-color: rgb(239, 236, 236);
+  margin: 2px;
+  padding: 9px;
+  font-size: 12px;
+}
+
+.timtim {
+  height: 45px;
+  padding: 10px;
+  font-size: 15px;
+  margin-top: 15px;
+  width: 100%;
+}
+.himanshu {
+  display: flex;
+  margin-top: 33px;
+  margin-left: 16px;
+  color: gray;
+}
+.bittu {
+  margin-left: 185px;
+}
+.abhi {
+  margin: 50px;
+}
+.nutan p {
+  color: gray;
+  margin: 10px;
+  margin-left: 5px;
+}
+.top {
+  text-align: center;
+  background-color: rgb(240, 51, 83);
+  color: white;
+  font-size: 17px;
+  width: 100%;
+  height: 55px;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+}
+.rupa {
+  display: flex;
+  padding: 10px;
+  font-size: 15px;
+  margin-top: 32px;
+}
+.rupa {
+  width: 100%;
+  padding-left: 48px;
+}
+.yesh p {
+  width: 45px;
+  position: absolute;
 }
