@@ -6,7 +6,7 @@ function AccountSetting() {
         <h1>Account</h1>
         <p>Timtim kumari</p>
       </div>
-      <div>
+      <div className={styles.abhi}>
         <div className={styles.over}>
           <div className={styles.himanshu}>
             <p className={styles.hook}>Overview</p>
@@ -35,7 +35,22 @@ function AccountSetting() {
             <p className={styles.hook}>Privacy Policy</p>
           </div>
         </div>
-        <div className={styles.content}></div>
+        <div className={styles.content}>
+          <div>
+            <img src="https://constant.myntassets.com/mymyntra/assets/img/no-saved-address.svg"></img>
+            <div>
+              <h4>SAVE YOUR ADDRESSES NOW</h4>
+              <p>
+                Add your home and office addresses and enjoy faster checkout
+              </p>
+              <div>
+                <button className={styles.tara}>
+                  <b>+ ADD NEW ADDRESS</b>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );

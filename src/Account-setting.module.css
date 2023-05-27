@@ -1,6 +1,6 @@
 .car {
-  margin: 40px;
-  margin-left: 130px;
+  margin: 40px auto;
+  max-width: 900px;
 }
 .model {
   border-bottom: 1px solid #d4d5d9;
@@ -42,5 +42,36 @@
   color: #4f515b;
 }
 .hook {
+  cursor: pointer;
+}
+.content {
+  flex: 2;
+  align-items: center;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+}
+.abhi {
+  display: flex;
+}
+img {
+  width: 200px;
+}
+h4 {
+  margin: 20px;
+  font-size: 13px;
+}
+.content p {
+  color: gray;
+}
+.tara {
+  color: #526cd0;
+  padding: 12px;
+  text-align: center;
+  width: 180px;
+  margin: 40px;
+  border-radius: 5px;
+  border: 1px solid #d4d5d9;
+  background-color: white;
   cursor: pointer;
 }
