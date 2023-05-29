@@ -1,0 +1,37 @@
+.container {
+  width: 530px;
+}
+.content {
+  background-color: white;
+  font-weight: 800;
+  padding: 15px;
+  border-bottom: 1px solid #d4d5d9;
+}
+.fackbook {
+  margin: 10px 0px;
+  background-color: white;
+  padding: 20px;
+  width: 551px;
+}
+.fackbook p {
+  margin: 30px 0px 0px 0px;
+  color: gray;
+}
+.chrome {
+  color: gray;
+  margin-left: 20px;
+}
+.chrome p {
+  padding: 15px;
+}
+.look p {
+  color: gray;
+  margin: 10px;
+  margin-left: 2px;
+}
+.look {
+  padding: 40px;
+}
+.male {
+  margin-left: 10px;
+}

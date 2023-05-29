@@ -5,7 +5,8 @@ import ProductFiltetDetail from "./product-filter/product-filter-detail";
 import Hook from "./hook";
 import Signup from "./signup";
 import AccountSetting from "./Account-setting";
-import Foam from "./foam";
+import Form from "./form";
+import Input from "./input";
 
 function App() {
   return (
@@ -27,7 +28,7 @@ function App() {
 
       {/* <Signup></Signup> */}
       {/* <AccountSetting></AccountSetting> */}
-      <Foam></Foam>
+      <Form></Form>
     </div>
   );
 }
