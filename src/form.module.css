@@ -50,21 +50,22 @@ h4 {
 
 .button {
   padding: 16px;
-  width: 260px;
+  flex: 1;
   cursor: pointer;
   background-color: white;
-  border: 1px solid #d4d5d9;
+  border: none;
 }
 .tag {
   padding: 16px;
-  width: 263px;
+  flex: 1;
   cursor: pointer;
   background-color: rgb(188, 184, 184);
-  border: 1px solid #d4d5d9;
+  border: none;
 }
 .two {
   color: white;
 }
 .footer-button {
   padding: 0;
+  display: flex;
 }
