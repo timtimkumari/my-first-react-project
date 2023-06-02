@@ -58,10 +58,10 @@ function Form() {
         </div>
       </div>
       <div className={styles.fackbook + " " + styles["footer-button"]}>
-        <button className={styles.button}>
+        <button className={styles.button} onClick={() => setShowModal(true)}>
           <b>CANCEL</b>
-        </button>{" "}
-        <button className={styles.tag}>
+        </button>
+        <button className={styles.tag} onClick={() => setShowModal(false)}>
           <b className={styles.two}>SAVE</b>
         </button>
       </div>
