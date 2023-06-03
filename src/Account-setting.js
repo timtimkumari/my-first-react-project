@@ -1,5 +1,12 @@
-import styles from "./Account-setting.module.css";
+import { useState } from 'react';
+import styles from './Account-setting.module.css';
+import AddressForm from './account-setting/address-form';
+import Modal from './modal/modal';
 function AccountSetting() {
+  const [showAddAddress, setShowAddAddress] = useState(false);
+  const closeAddAdress = () => setShowAddAddress(false);
+  const showAddAdress = () => setShowAddAddress(true);
+
   return (
     <div className={styles.car}>
       <div className={styles.model}>
@@ -37,18 +44,23 @@ function AccountSetting() {
         </div>
         <div className={styles.content}>
           <div>
-            <img src="https://constant.myntassets.com/mymyntra/assets/img/no-saved-address.svg"></img>
+            <img src='https://constant.myntassets.com/mymyntra/assets/img/no-saved-address.svg'></img>
             <div>
               <h4>SAVE YOUR ADDRESSES NOW</h4>
               <p>
                 Add your home and office addresses and enjoy faster checkout
               </p>
               <div>
-                <button className={styles.tara}>
+                <button className={styles.tara} onClick={showAddAdress}>
                   <b>+ ADD NEW ADDRESS</b>
                 </button>
               </div>
             </div>
+            {showAddAddress && (
+              <Modal closeModal={closeAddAdress}>
+                <AddressForm />
+              </Modal>
+            )}
           </div>
         </div>
       </div>

@@ -1,8 +1,8 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import "./footer.css";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import './footer.css';
 function Footer() {
   return (
-    <div className="footer_container">
+    <div className='footer_container'>
       <h2>Customer Pages</h2>
       <ul>
         <p>070-2707-1234</p>
@@ -10,7 +10,7 @@ function Footer() {
         <p>Weekends 12:00 -13:00 </p>
         <p>Holidays: Sat,Sun,National holiday</p>
       </ul>
-      <div className="footer_content">
+      <div className='footer_content'>
         <h2>Shippment Info</h2>
         <ul>
           <p>Track Shipping Location</p>
@@ -20,7 +20,7 @@ function Footer() {
           <p>(Please make sure to use Post Office Parcel service)</p>
         </ul>
       </div>
-      <div className="nutan">
+      <div className='nutan'>
         <h2>Company</h2>
         <ul>
           <p>Company</p>
@@ -28,9 +28,9 @@ function Footer() {
         </ul>
       </div>
       <h2>Social media</h2>
-      <div className="icon_container">
-        <div className="icon">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"></svg>
+      <div className='icon_container'>
+        <div className='icon'>
+          <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 576 512'></svg>
         </div>
       </div>
     </div>

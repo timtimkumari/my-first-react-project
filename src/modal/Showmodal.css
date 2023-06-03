@@ -6,27 +6,10 @@
 .cantainer {
   margin: 5rem;
 }
-.modal-wrapper {
-  position: fixed;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  top: 0;
-  background-color: rgba(189, 189, 189, 0.9);
-}
-.modal-container {
-  position: fixed;
-  max-width: 30rem;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background-color: #fff;
-  padding: 1rem 2rem;
-  border-radius: 0.5rem;
-}
+
 h2 {
   font-size: 1.2rem;
-  font-family: "Work Sans", sans-serif;
+  font-family: 'Work Sans', sans-serif;
 }
 p {
   font-size: 0.9rem;
@@ -34,7 +17,7 @@ p {
   line-height: 1.8rem;
   color: #212121;
   font-weight: 400;
-  font-family: "Source Serif Pro", serif;
+  font-family: 'Source Serif Pro', serif;
 }
 .modal-btn {
   border: none;
@@ -42,7 +25,7 @@ p {
   background-color: #212121;
   color: #fff;
   cursor: pointer;
-  font-family: "Work Sans", sans-serif;
+  font-family: 'Work Sans', sans-serif;
   transform: scale(0.9);
 }
 .modal-btn:hover {

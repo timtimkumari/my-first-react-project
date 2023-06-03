@@ -1,8 +1,7 @@
-import Showmodal from './Showmodal.css';
 import React, { useState } from 'react';
-import MyModal from './Showmodal';
+import MyModal from './modal';
 
-const Modal = () => {
+const MyModal = () => {
   const [showModal, setShowModal] = useState(false);
 
   const closeModal = () => setShowModal(false);
@@ -12,7 +11,11 @@ const Modal = () => {
       <button className='modal-btn' onClick={() => setShowModal(true)}>
         Open Modal
       </button>
-      {showModal && <MyModal closeModal={closeModal} />}
+      {showModal && (
+        <MyModal closeModal={closeModal}>
+          <></>
+        </MyModal>
+      )}
       <p>
         Lorem ipsum dolor sit, amet consectetur adipisicing elit. Suscipit,
         laudantium laborum voluptas officiis nisi nesciunt numquam autem ipsa
@@ -82,4 +85,4 @@ const Modal = () => {
     </>
   );
 };
-export default Modal;
+export default MyModal;
