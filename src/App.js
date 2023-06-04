@@ -1,6 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 import AccountSetting from './Account-setting';
+import Pincode from './pincode';
 
 function App() {
   return (
@@ -21,7 +22,8 @@ function App() {
       </header>
 
       {/* <Signup></Signup> */}
-      <AccountSetting></AccountSetting>
+      {/* <AccountSetting></AccountSetting> */}
+      <Pincode></Pincode>
     </div>
   );
 }
