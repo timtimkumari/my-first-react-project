@@ -2,6 +2,8 @@ import logo from './logo.svg';
 import './App.css';
 import AccountSetting from './Account-setting';
 import Pincode from './pincode';
+import AreaSeleter from './area-seleter';
+import AddressForm from './account-setting/address-form';
 
 function App() {
   return (
@@ -23,7 +25,9 @@ function App() {
 
       {/* <Signup></Signup> */}
       {/* <AccountSetting></AccountSetting> */}
-      <Pincode></Pincode>
+      {/* <Pincode></Pincode> */}
+      {/* <AddressForm></AddressForm> */}
+      <AreaSeleter></AreaSeleter>
     </div>
   );
 }

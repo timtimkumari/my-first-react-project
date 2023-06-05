@@ -1,0 +1,54 @@
+.hehe {
+  border: 1px solid #eaeaec;
+  border-radius: 5px;
+  margin: 30px;
+  width: 450px;
+  padding: 10px;
+}
+h3 {
+  font-size: 16px;
+  font-weight: 500;
+  color: #535766;
+  margin-bottom: 18px;
+  margin: 14px;
+}
+.content {
+  margin: 14px;
+  color: #535766;
+  font-size: 13px;
+  margin-left: 10px;
+}
+.top {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+}
+.text {
+  cursor: pointer;
+  width: 40%;
+  margin: 14px;
+  border: 1px solid #eaeaec;
+  padding: 8px;
+  margin-left: 13px;
+  background-color: white;
+  border-radius: 5px;
+}
+.mandal {
+  cursor: pointer;
+  width: 40%;
+  margin: 14px;
+  border: 1px solid #eaeaec;
+  padding: 8px;
+  margin-left: 13px;
+  background-color: white;
+  color: #ff3f6c;
+  border-radius: 5px;
+}
+.house {
+  vertical-align: middle;
+  margin: 4px;
+}
+.container {
+  height: 115px;
+  overflow: auto;
+}
