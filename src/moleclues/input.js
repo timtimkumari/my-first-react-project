@@ -1,11 +1,12 @@
-import styles from "./input.module.css";
-function Input({ placeholder }) {
+import styles from './input.module.css';
+function Input({ placeholder, ...rest }) {
   return (
     <div className={styles.nutan}>
       <input
         className={styles.timtim}
-        type="text"
+        type='text'
         placeholder={placeholder}
+        {...rest}
       ></input>
     </div>
   );

@@ -24,10 +24,10 @@ function App() {
       </header>
 
       {/* <Signup></Signup> */}
-      {/* <AccountSetting></AccountSetting> */}
+      <AccountSetting></AccountSetting>
       {/* <Pincode></Pincode> */}
       {/* <AddressForm></AddressForm> */}
-      <AreaSeleter></AreaSeleter>
+      {/* <AreaSeleter></AreaSeleter> */}
     </div>
   );
 }
