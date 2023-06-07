@@ -2,7 +2,15 @@ import React from 'react';
 import { useState } from 'react';
 import Input from '../moleclues/input';
 import styles from './address-form.module.css';
+import axios from 'axios';
+import Pincode from '../pincode';
+import AreaSeleter from '../area-seleter';
+
 function AddressForm() {
+  const [showAddAddress, setShowAddAddress] = useState(false);
+  const closeAddAdress = () => setShowAddAddress(false);
+  const showAddAdress = () => setShowAddAddress(true);
+
   const [user, setUser] = useState({
     name: '',
     mobile: '',
@@ -12,13 +20,39 @@ function AddressForm() {
     locality: '',
     city: '',
   });
+  const [District, setDistrict] = useState(null);
 
   const handlaChange = (e) => {
     setUser({
       ...user,
       [e.target.name]: e.target.value,
     });
-    console.log(e);
+    if (e.target.name === 'pincode') {
+      if (e.target.value.length === 6) {
+        axios
+          .get('https://api.postalpincode.in/pincode/' + e.target.value)
+          .then((res) => {
+            console.log(res);
+            const mySet = new Set();
+            res.data[0].PostOffice.forEach((d) => {
+              mySet.add(d.District);
+            });
+
+            setDistrict(Array.from(mySet));
+            setUser({
+              ...user,
+              state: res.data[0].PostOffice[0].State,
+            });
+          });
+      } else {
+        setDistrict(null);
+        setUser({
+          ...user,
+          state: '',
+        });
+      }
+      console.log(e);
+    }
   };
   const handlaSubmit = (e) => {
     e.preventDefult();
@@ -43,12 +77,17 @@ function AddressForm() {
               onChange={handlaChange}
               placeholder={'Pincode*'}
             />
-            <Input name='state' placeholder={'State*'} />
+            <Input name='state' value={user.state} placeholder={'State*'} />
             <Input
               name='address'
               placeholder={'Address(House No,Building street,Area)*'}
             />
-            <Input name='locality' placeholder={'Locality/town*'} />
+            <Input
+              name='locality'
+              onClick={showAddAdress}
+              placeholder={'Locality/town*'}
+            />
+
             <Input name='city' placeholder={'City/District*'} />
           </div>
           <div className={styles.fackbook}>
@@ -101,6 +140,11 @@ function AddressForm() {
             <b className={styles.two}>SAVE</b>
           </button>
         </div>
+        {showAddAddress && (
+          <div>
+            <AreaSeleter />
+          </div>
+        )}
       </form>
     </div>
   );
