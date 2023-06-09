@@ -4,7 +4,8 @@ import AccountSetting from './Account-setting';
 import Pincode from './pincode';
 import AreaSeleter from './area-seleter';
 import AddressForm from './account-setting/address-form';
-
+import AddressCard from './address-card';
+import Address from './address';
 function App() {
   return (
     <div className='App'>
@@ -28,6 +29,8 @@ function App() {
       {/* <Pincode></Pincode> */}
       {/* <AddressForm></AddressForm> */}
       {/* <AreaSeleter></AreaSeleter> */}
+      <AddressCard></AddressCard>
+      <Address></Address>
     </div>
   );
 }

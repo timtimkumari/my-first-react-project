@@ -32,19 +32,48 @@
 // } else {
 //   console.log("The number is negative.");
 // }
-let x = 1;
-if (x === 1) {
-  console.log('sunday');
-} else if (x === 2) {
-  console.log('monday');
-} else if (x === 3) {
-  console.log('tuesday');
-} else if (x === 4) {
-  console.log('wednesday');
-} else if (x === 5) {
-  console.log('thursday');
-} else if (x === 6) {
-  console.log('friday');
-} else if (x === 7) {
-  console.log('saturaday');
-} else console.log('none');
+//
+
+// let xyz = [1, 2, 34, 45, 56];
+// let max = xyz[0];
+// for (let i = 1; i < xyz.length; i++) {
+//   if (xyz[i] > max) {
+//     max = xyz[i];
+//   }
+// }
+// console.log(max);
+// let marks = 50;
+// if (50 >= 60) {
+//   console.log('first division');
+// } else if (50 >= 45 ) {
+//   console.log('second division');
+// } else if (50 >= 33) {
+//   console.log('third division');
+// } else {
+//   console.log('fail');
+// }
+
+// let x = 2;
+// for (let i = 1; i <= x; i++) {
+//   let stars = '';
+//   for (let j = 1; j <= i; j++) {
+//     stars += '*';
+//   }
+//   console.log(stars);
+
+//   let y = 4;
+//   for (let i = 1; i <= y; i++) {
+//     let stars = '';
+    
+//       stars += '*';
+//     }
+//     console.log(stars);
+// //   }
+// let number=75
+// if(75>=60){
+//     console.log("first divison")
+
+// }else{
+//     if(75>=45)
+//     console.log("")
+// }
