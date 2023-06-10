@@ -64,7 +64,7 @@
 //   let y = 4;
 //   for (let i = 1; i <= y; i++) {
 //     let stars = '';
-    
+
 //       stars += '*';
 //     }
 //     console.log(stars);

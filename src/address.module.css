@@ -1,0 +1,28 @@
+.timtim {
+  width: 400px;
+  margin: auto;
+}
+.nutan {
+  margin: 10px 10px 35px 15px;
+  margin-left: 25px;
+  font-size: 14px;
+  color: #7e818c;
+}
+
+.hehe {
+  cursor: pointer;
+  text-align: center;
+  padding: 15px 0px;
+}
+.mandal {
+  color: #ff3f6c;
+}
+.conter {
+  border-top: 0.5px solid #eaeaec;
+  position: relative;
+  padding: 5px 0;
+}
+.conter .himanshu,
+.conter .himanshu:hover {
+  border-right: 1px solid #eaeaec;
+}
