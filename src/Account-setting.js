@@ -1,11 +1,9 @@
 import { useState } from 'react';
 import styles from './Account-setting.module.css';
 import AddressForm from './account-setting/address-form';
-import Modal from './modal/modal';
+import usePopup from './hooks/usePopup';
 function AccountSetting() {
-  const [showAddAddress, setShowAddAddress] = useState(false);
-  const closeAddAdress = () => setShowAddAddress(false);
-  const showAddAdress = () => setShowAddAddress(true);
+  const { openPopup } = usePopup();
 
   return (
     <div className={styles.car}>
@@ -51,16 +49,14 @@ function AccountSetting() {
                 Add your home and office addresses and enjoy faster checkout
               </p>
               <div>
-                <button className={styles.tara} onClick={showAddAdress}>
+                <button
+                  className={styles.tara}
+                  onClick={() => openPopup({ body: <AddressForm /> })}
+                >
                   <b>+ ADD NEW ADDRESS</b>
                 </button>
               </div>
             </div>
-            {showAddAddress && (
-              <Modal closeModal={closeAddAdress}>
-                <AddressForm />
-              </Modal>
-            )}
           </div>
         </div>
       </div>

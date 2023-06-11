@@ -1,11 +1,11 @@
 import Input from './moleclues/input';
-import Styles from './area-seleter.module.css';
+import Styles from './area-Selector.module.css';
 
-function AreaSeleter() {
+function AreaSelector() {
   return (
     <div className={Styles.hehe}>
       <div className={Styles.conter}>
-        <div>
+        <div className={Styles.modal}>
           <h3>Locality Selection</h3>
         </div>
         <div className={Styles.container}>
@@ -115,4 +115,4 @@ function AreaSeleter() {
     </div>
   );
 }
-export default AreaSeleter;
+export default AreaSelector;

@@ -1,15 +1,15 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useState } from 'react';
 import Input from '../moleclues/input';
 import styles from './address-form.module.css';
 import axios from 'axios';
 import Pincode from '../pincode';
-import AreaSeleter from '../area-seleter';
+import AreaSeleter from '../area-Selector';
+import Modal from '../modal/modal';
+import usePopup from '../hooks/usePopup';
 
 function AddressForm() {
-  const [showAddAddress, setShowAddAddress] = useState(false);
-  const closeAddAdress = () => setShowAddAddress(false);
-  const showAddAdress = () => setShowAddAddress(true);
+  const { openPopup, closePopup } = usePopup();
 
   const [user, setUser] = useState({
     name: '',
@@ -20,7 +20,7 @@ function AddressForm() {
     locality: '',
     city: '',
   });
-  const [District, setDistrict] = useState(null);
+  const [district, setDistrict] = useState(null);
 
   const handlaChange = (e) => {
     setUser({
@@ -84,7 +84,7 @@ function AddressForm() {
             />
             <Input
               name='locality'
-              onClick={showAddAdress}
+              onClick={() => openPopup({ body: <AreaSeleter /> })}
               placeholder={'Locality/town*'}
             />
 
@@ -140,11 +140,6 @@ function AddressForm() {
             <b className={styles.two}>SAVE</b>
           </button>
         </div>
-        {showAddAddress && (
-          <div>
-            <AreaSeleter />
-          </div>
-        )}
       </form>
     </div>
   );
