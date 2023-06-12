@@ -3,7 +3,7 @@ import styles from './Account-setting.module.css';
 import AddressForm from './account-setting/address-form';
 import usePopup from './hooks/usePopup';
 function AccountSetting() {
-  const { openPopup } = usePopup();
+  const { openPopup, closePopup } = usePopup('address');
 
   return (
     <div className={styles.car}>
@@ -51,7 +51,9 @@ function AccountSetting() {
               <div>
                 <button
                   className={styles.tara}
-                  onClick={() => openPopup({ body: <AddressForm /> })}
+                  onClick={() =>
+                    openPopup({ body: <AddressForm onCancle={closePopup} /> })
+                  }
                 >
                   <b>+ ADD NEW ADDRESS</b>
                 </button>

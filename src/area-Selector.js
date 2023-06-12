@@ -1,113 +1,46 @@
 import Input from './moleclues/input';
 import Styles from './area-Selector.module.css';
+import { useEffect, useState } from 'react';
 
-function AreaSelector() {
+function AreaSelector({ data, onConfirm, onCancle }) {
+  const [selected, setSelected] = useState('');
+
+  useEffect(() => {
+    setSelected('');
+  }, [data]);
+
   return (
     <div className={Styles.hehe}>
       <div className={Styles.conter}>
         <div className={Styles.modal}>
-          <h3>Locality Selection</h3>
+          <h3>District Selection</h3>
         </div>
         <div className={Styles.container}>
-          <div className={Styles.content}>
-            <label>
-              <input
-                name='address-type'
-                type='radio'
-                className={Styles.house}
-              ></input>{' '}
-              Shambhuganj
-            </label>
-          </div>{' '}
-          <div className={Styles.content}>
-            <label>
-              <input
-                name='address-type'
-                type='radio'
-                className={Styles.house}
-              ></input>{' '}
-              Barabad
-            </label>
-          </div>{' '}
-          <div className={Styles.content}>
-            <label>
-              <input
-                name='address-type'
-                type='radio'
-                className={Styles.house}
-              ></input>{' '}
-              Belarimilk
-            </label>
-          </div>{' '}
-          <div className={Styles.content}>
-            <label>
-              <input
-                name='address-type'
-                type='radio'
-                className={Styles.house}
-              ></input>{' '}
-              Chutia
-            </label>
-          </div>{' '}
-          <div className={Styles.content}>
-            <label>
-              <input
-                name='address-type'
-                type='radio'
-                className={Styles.house}
-              ></input>{' '}
-              Gidhora
-            </label>
-          </div>{' '}
-          <div className={Styles.content}>
-            <label>
-              <input
-                name='address-type'
-                type='radio'
-                className={Styles.house}
-              ></input>{' '}
-              Kasba
-            </label>
-          </div>{' '}
-          <div className={Styles.content}>
-            <label>
-              <input
-                name='address-type'
-                type='radio'
-                className={Styles.house}
-              ></input>{' '}
-              Kavisha
-            </label>
-          </div>
-          <div className={Styles.content}>
-            <label>
-              <input
-                name='address-type'
-                type='radio'
-                className={Styles.house}
-              ></input>
-              Krma
-            </label>
-          </div>
-          <div className={Styles.content}>
-            <label>
-              <input
-                name='address-type'
-                type='radio'
-                className={Styles.house}
-              ></input>
-              Kumarpur
-            </label>
-          </div>
+          {data.map((d) => (
+            <div className={Styles.content}>
+              <label>
+                <input
+                  name='address-type'
+                  type='radio'
+                  className={Styles.house}
+                  onChange={() => setSelected(d)}
+                ></input>
+                {d}
+              </label>
+            </div>
+          ))}
         </div>
         <div>
-          <Input placeholder={'Others'} />
+          <Input
+            placeholder={'Others'}
+            onChange={(e) => setSelected(e.target.value)}
+          />
         </div>
         <div className={Styles.top}>
-          <button className={Styles.text}>
+          <button className={Styles.text} onClick={onCancle}>
             <b>CANCEL</b>
           </button>
-          <button className={Styles.mandal}>
+          <button className={Styles.mandal} onClick={() => onConfirm(selected)}>
             <b>CONFIRM</b>
           </button>
         </div>

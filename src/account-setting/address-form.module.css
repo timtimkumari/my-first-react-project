@@ -10,6 +10,13 @@
   height: 90vh;
   overflow: auto;
 }
+.nutan {
+  margin: 17px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
 h4 {
   margin: 6px 0px;
   margin-left: 25px;
@@ -23,18 +30,21 @@ h4 {
   top: 0;
 }
 .fackbook {
-  margin-top: 10px;
   background-color: white;
   padding: 20px;
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 .fackbook p {
-  margin: 12px;
   color: gray;
 }
 
 .not {
   margin: 10px;
   cursor: pointer;
+  margin-left: 0;
 }
 .himanshu {
   cursor: pointer;
@@ -45,7 +55,7 @@ h4 {
 }
 .house {
   cursor: pointer;
-  margin-left: 6px;
+  margin-top: 16px;
 }
 .top {
   margin: 6px;
@@ -81,4 +91,8 @@ h4 {
 .mandal {
   flex: 10;
   overflow: auto;
+}
+.conter {
+  display: flex;
+  flex-direction: column;
 }

@@ -1,9 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
 import AccountSetting from './Account-setting';
-import Pincode from './pincode';
-import AreaSelector from './area-Selector';
-import AddressForm from './account-setting/address-form';
 import AddressCard from './address-card';
 import Address from './address';
 import PopupsWapper from './commons/popup/PopupWrapper';
@@ -29,7 +26,6 @@ function App() {
         <AccountSetting></AccountSetting>
         {/* <Pincode></Pincode> */}
         {/* <AddressForm></AddressForm> */}
-        {/* <AreaSelector></AreaSelector> */}
         <AddressCard></AddressCard>
         <Address></Address>
       </PopupsWapper>
