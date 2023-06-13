@@ -1,6 +1,5 @@
-import { useCallback, useState, Fragment, useEffect } from 'react';
+import { useState, Fragment, useEffect } from 'react';
 import PopupContext from './PopupContext';
-import { getUniqueId } from '../utils';
 import Modal from '../../modal/modal';
 
 function PopupsWapper({ children }) {
@@ -17,17 +16,13 @@ function PopupsWapper({ children }) {
     };
   }, [modals.length]);
 
-  const openPopup = ({ body, onClose }) => {
-    let id = getUniqueId();
+  const openPopup = ({ body, onClose, id }) => {
     setModals((ms) => [...ms, { key: id, body, onClose }]);
-    return id;
   };
 
   const closePopup = (id) => {
-    console.log(modals, id);
     setModals((ms) => [...ms.filter((m) => m.key !== id)]);
   };
-  console.log(modals);
 
   return (
     <PopupContext.Provider value={{ openPopup, closePopup }}>

@@ -1,20 +1,14 @@
 import { useCallback, useState, useContext } from 'react';
 import PopupContext from '../commons/popup/PopupContext';
+import { getUniqueId } from '../commons/utils';
 
-export default function usePopup(name) {
-  const [id, setId] = useState(null);
+export default function usePopup() {
+  const [id, setId] = useState(getUniqueId());
   const { openPopup: open, closePopup: close } = useContext(PopupContext);
-  const openPopup = useCallback(
-    (d) => {
-      console.log('setting id ', id, name);
-      setId(open(d));
-    },
-    [open, id, name]
-  );
+  const openPopup = useCallback((d) => open({ id, ...d }), [open, id]);
   const closePopup = useCallback(() => {
-    console.log('removeing id ', id, name);
     close(id);
-    // setId(null);
+    setId(getUniqueId());
   }, [close, id]);
   return { openPopup, closePopup };
 }

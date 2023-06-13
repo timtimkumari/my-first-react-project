@@ -1,10 +1,8 @@
 import { useState } from 'react';
 import styles from './Account-setting.module.css';
-import AddressForm from './account-setting/address-form';
-import usePopup from './hooks/usePopup';
-function AccountSetting() {
-  const { openPopup, closePopup } = usePopup('address');
+import AddressGrid from './account-setting/address-grid';
 
+function AccountSetting() {
   return (
     <div className={styles.car}>
       <div className={styles.model}>
@@ -41,25 +39,7 @@ function AccountSetting() {
           </div>
         </div>
         <div className={styles.content}>
-          <div>
-            <img src='https://constant.myntassets.com/mymyntra/assets/img/no-saved-address.svg'></img>
-            <div>
-              <h4>SAVE YOUR ADDRESSES NOW</h4>
-              <p>
-                Add your home and office addresses and enjoy faster checkout
-              </p>
-              <div>
-                <button
-                  className={styles.tara}
-                  onClick={() =>
-                    openPopup({ body: <AddressForm onCancle={closePopup} /> })
-                  }
-                >
-                  <b>+ ADD NEW ADDRESS</b>
-                </button>
-              </div>
-            </div>
-          </div>
+          <AddressGrid />
         </div>
       </div>
     </div>

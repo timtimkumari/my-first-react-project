@@ -6,10 +6,10 @@ import axios from 'axios';
 import AreaSeleter from '../area-Selector';
 import usePopup from '../hooks/usePopup';
 
-function AddressForm({ onCancle }) {
-  const { openPopup, closePopup } = usePopup('area');
+function AddressForm({ onCancle, onSubmit }) {
+  const { openPopup, closePopup } = usePopup();
 
-  const [user, setUser] = useState({
+  const [address, setAddress] = useState({
     name: '',
     mobile: '',
     pincode: '',
@@ -26,17 +26,31 @@ function AddressForm({ onCancle }) {
         <AreaSeleter
           data={district}
           onCancle={closePopup}
-          onConfirm={(d) => setUser((u) => ({ ...u, district: d }))}
+          onConfirm={(d) => {
+            setAddress((u) => ({ ...u, district: d }));
+            closePopup();
+          }}
         />
       ),
     });
   };
 
-  const handlaChange = (e) => {
-    setUser((u) => ({
-      ...u,
-      [e.target.name]: e.target.value,
-    }));
+  const handleChange = (e) => {
+    if (
+      e.target.name === 'openOnSaturday' ||
+      e.target.name === 'openOnSunday' ||
+      e.target.name === 'default'
+    ) {
+      setAddress((u) => ({
+        ...u,
+        [e.target.name]: e.target.checked,
+      }));
+    } else {
+      setAddress((u) => ({
+        ...u,
+        [e.target.name]: e.target.value,
+      }));
+    }
     if (e.target.name === 'pincode') {
       if (e.target.value.length === 6) {
         axios
@@ -49,14 +63,14 @@ function AddressForm({ onCancle }) {
             });
 
             setDistrict(Array.from(mySet));
-            setUser((u) => ({
+            setAddress((u) => ({
               ...u,
               state: res.data[0].PostOffice[0].State,
             }));
           });
       } else {
         setDistrict([]);
-        setUser((u) => ({
+        setAddress((u) => ({
           ...u,
           state: '',
         }));
@@ -64,10 +78,10 @@ function AddressForm({ onCancle }) {
     }
   };
   const handlaSubmit = (e) => {
-    e.preventDefult();
-    console.log(user);
+    e.preventDefault();
+    onSubmit(address);
   };
-  console.log(user);
+
   return (
     <div className={styles.container}>
       <form onSubmit={handlaSubmit}>
@@ -79,46 +93,46 @@ function AddressForm({ onCancle }) {
           <div className={styles.fackbook}>
             <Input
               name='name'
-              value={user.name}
-              onChange={handlaChange}
+              value={address.name}
+              onChange={handleChange}
               placeholder={'Name*'}
             />
             <Input
               name='mobile'
-              value={user.mobile}
-              onChange={handlaChange}
+              value={address.mobile}
+              onChange={handleChange}
               placeholder={'Mobile*'}
             />
           </div>
           <div className={styles.fackbook}>
             <Input
               name='pincode'
-              value={user.pincode}
-              onChange={handlaChange}
+              value={address.pincode}
+              onChange={handleChange}
               placeholder={'Pincode*'}
             />
             <Input
               name='state'
               disabled
-              value={user.state}
+              value={address.state}
               placeholder={'State*'}
             />
             <Input
               name='address'
-              value={user.address}
-              onChange={handlaChange}
+              value={address.address}
+              onChange={handleChange}
               placeholder={'Address(House No,Building street,Area)*'}
             />
             <Input
               name='locality'
-              value={user.locality}
-              onChange={handlaChange}
+              value={address.locality}
+              onChange={handleChange}
               placeholder={'Locality/town*'}
             />
 
             <Input
               name='district'
-              value={user.district}
+              value={address.district}
               onClick={openDiscritSelected}
               placeholder={'City/District*'}
             />
@@ -128,9 +142,10 @@ function AddressForm({ onCancle }) {
               <p>Type of Address *</p>
               <label className={styles.house}>
                 <input
-                  name='address-type'
-                  value={user.addressType}
-                  onChange={handlaChange}
+                  name='addressType'
+                  value='home'
+                  checked={address.addressType === 'home'}
+                  onChange={handleChange}
                   type='radio'
                   className={styles.house}
                 ></input>
@@ -138,9 +153,10 @@ function AddressForm({ onCancle }) {
               </label>
               <label className={styles.bool}>
                 <input
-                  name='address-type'
-                  value={user.addressType}
-                  onChange={handlaChange}
+                  name='addressType'
+                  value='office'
+                  checked={address.addressType === 'office'}
+                  onChange={handleChange}
                   type='radio'
                   className={styles.house}
                 ></input>
@@ -152,9 +168,9 @@ function AddressForm({ onCancle }) {
               <div className={styles.conter}>
                 <label className={styles.himanshu}>
                   <input
-                    name='OpenOnSaturday'
-                    value={user.OpenOnSunday}
-                    onChange={handlaChange}
+                    name='openOnSaturday'
+                    checked={address.openOnSaturday}
+                    onChange={handleChange}
                     type='checkbox'
                     className={styles.not}
                   />
@@ -162,9 +178,9 @@ function AddressForm({ onCancle }) {
                 </label>
                 <label className={styles.himanshu}>
                   <input
-                    name='OpenOnSunday'
-                    value={user.OpenOnSaturday}
-                    onChange={handlaChange}
+                    name='openOnSunday'
+                    checked={address.openOnSunday}
+                    onChange={handleChange}
                     type='checkbox'
                     className={styles.not}
                   />
@@ -175,9 +191,9 @@ function AddressForm({ onCancle }) {
               <div className={styles.top}>
                 <label className={styles.himanshu}>
                   <input
-                    name='MakeThisAsMyDefaultAddress'
-                    value={user.MakeThisAsMyDefaultAddress}
-                    onChange={handlaChange}
+                    name='default'
+                    checked={address.default}
+                    onChange={handleChange}
                     type='checkbox'
                     className={styles.not}
                   />
@@ -191,7 +207,7 @@ function AddressForm({ onCancle }) {
           <button type='button' className={styles.button} onClick={onCancle}>
             <b>CANCEL</b>
           </button>
-          <button className={styles.tag}>
+          <button type='submit' className={styles.tag}>
             <b className={styles.two}>SAVE</b>
           </button>
         </div>

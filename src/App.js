@@ -1,8 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
 import AccountSetting from './Account-setting';
-import AddressCard from './address-card';
-import Address from './address';
 import PopupsWapper from './commons/popup/PopupWrapper';
 function App() {
   return (
@@ -24,10 +22,6 @@ function App() {
       <PopupsWapper>
         {/* <Signup></Signup> */}
         <AccountSetting></AccountSetting>
-        {/* <Pincode></Pincode> */}
-        {/* <AddressForm></AddressForm> */}
-        <AddressCard></AddressCard>
-        <Address></Address>
       </PopupsWapper>
     </div>
   );

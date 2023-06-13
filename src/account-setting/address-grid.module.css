@@ -1,0 +1,11 @@
+.tara {
+  color: #526cd0;
+  padding: 12px;
+  text-align: center;
+  width: 180px;
+  margin: 40px;
+  border-radius: 5px;
+  border: 1px solid #d4d5d9;
+  background-color: white;
+  cursor: pointer;
+}

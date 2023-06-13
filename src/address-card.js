@@ -1,5 +1,9 @@
+import AddressDeleteConfirm from './account-setting/address-delete-confirm';
 import Styles from './address-card.module.css';
-function AddressCard() {
+import usePopup from './hooks/usePopup';
+function AddressCard({ data }) {
+  const { openPopup, closePopup } = usePopupC();
+
   return (
     <div className={Styles.container}>
       <div className={Styles.pop}>
@@ -17,7 +21,24 @@ function AddressCard() {
         </div>
         <div className={Styles.himanshu}>
           <button className={Styles.moon}>EDIT</button>
-          <button className={Styles.mandal}>REMOVE</button>
+          <button
+            className={Styles.mandal}
+            onClick={() =>
+              openPopup({
+                body: (
+                  <AddressDeleteConfirm
+                    onCancle={closePopup}
+                    onSubmit={(a) => {
+                      // TODO delete address
+                      closePopup();
+                    }}
+                  />
+                ),
+              })
+            }
+          >
+            REMOVE
+          </button>
         </div>
       </div>
     </div>

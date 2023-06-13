@@ -1,6 +1,6 @@
-import Styles from './address.module.css';
-import Button from './moleclues/button/button';
-function Address() {
+import Styles from './address-delete-confirm.module.css';
+import Button from '../moleclues/button/button';
+function AddressDeleteConfirm({ onCancle, onConfirm }) {
   return (
     <div className={Styles.timtim}>
       <div>
@@ -13,14 +13,15 @@ function Address() {
         <Button
           className={Styles.kajal + ' ' + Styles['himanshu']}
           type={'secondary'}
+          onClick={onCancle}
         >
           <p>CANCEL</p>
         </Button>
-        <Button className={Styles.kajal} type={'secondary'}>
+        <Button className={Styles.kajal} type={'secondary'} onClick={onConfirm}>
           <p className={Styles.mandal}>DELETE</p>
         </Button>
       </div>
     </div>
   );
 }
-export default Address;
+export default AddressDeleteConfirm;
